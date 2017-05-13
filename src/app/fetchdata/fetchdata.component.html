@@ -1,0 +1,26 @@
+<h2>Githib Subcribe  List </h2>
+            
+
+   <md-card *ngFor= "let n of name">
+  <md-card-header >
+  
+  
+    <img  md-card-avatar src={{n.avatar_url}}    >
+  
+  
+  
+    <md-card-title>{{n.login}}</md-card-title>
+   <md-card-subtitle>Really, they are!</md-card-subtitle>
+  </md-card-header>
+ 
+  
+  <md-card-content>
+    <p>Something pretty...</p>
+  </md-card-content>
+
+ <img class="md-card-image" src= {{n.avatar_url}} md-card-image/>
+
+  
+</md-card>
+
+       

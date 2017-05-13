@@ -1,0 +1,60 @@
+<h3> We are fetching api from Customers Data </h3>
+
+
+<md-card *ngFor= "let n of customers">
+    <md-card-header>
+        <md-card-title>{{n.id}}</md-card-title>
+        <md-card-subtitle>{{n.firstname}}</md-card-subtitle>
+    </md-card-header>
+ 
+    <md-card-content>
+     {{  'Mr:' + n.firstname + ' ' + n.lastname}}
+     <hr>
+
+     {{n.email}}
+     
+     <hr>
+     {{n.address}}
+
+     <hr>
+     {{n.city}}
+
+     <hr>
+
+     {{n.state}}
+    </md-card-content>
+  
+    <md-card-footer>
+     ******************************************   
+    </md-card-footer>
+</md-card>
+
+<md-card *ngFor= "let n of customers">
+  <md-grid-list cols="3">
+   <md-grid-tile [style.border-right]="'1px dashed #ddd'">
+      {{  'Mr:' + n.firstname + ' ' + n.lastname}}
+   </md-grid-tile>
+   <md-grid-tile [style.border-right]="'1px dashed #ddd'">
+     {{n.email}}
+   </md-grid-tile>
+   <md-grid-tile>
+     {{n.city}}
+   </md-grid-tile>
+  </md-grid-list>
+</md-card>
+
+
+
+<md-card *ngFor= "let n of customers">
+  <md-list>
+    <md-list-item>
+     <img md-list-avatar src="./assets/man.ico" alt="Desc 1">
+      <h3 md-line> {{  'Mr:' + n.firstname + ' ' + n.lastname}}</h3>
+      <p md-line>
+        <span>  {{n.email}}</span>
+      </p>
+    </md-list-item>
+
+  
+  </md-list>
+</md-card>
